@@ -5,8 +5,21 @@ Feature: As a manager i should be able to use Manufacturing Order functionality 
     When the user click Manufacturing module
     Then the page title should be "Manufacturing Orders - Odoo"
 
-  Scenario: Verify that Manufacturing Orders functionality
+  Scenario Outline: Verify that Manufacturing Orders link clickable
     When user clicks on Manufacturing Orders link
     Then the page title should be "Manufacturing Orders - Odoo"
+    And the "<page elements>" should displayed
+
+    Examples:
+      |page elements  |
+      |Create Button  |
+      |import Button  |
+      |search box     |
+      |List Button    |
+      |Kanban Button  |
+      |Calendar Button|
+      |Pivot Button   |
+      |Graph Button   |
+
 
 
