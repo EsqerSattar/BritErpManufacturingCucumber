@@ -1,4 +1,4 @@
-package utilities;
+package com.britErp.utilities;
 
 
 import io.github.bonigarcia.wdm.WebDriverManager;

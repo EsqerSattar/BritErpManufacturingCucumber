@@ -1,0 +1,12 @@
+Feature: As a manager i should be able to use Manufacturing Order functionality under the Operations category
+
+  Background:steps for user on the Manufacturing module page
+    Given the "manager" signs in
+    When the user click Manufacturing module
+    Then the page title should be "Manufacturing Orders - Odoo"
+
+  Scenario: Verify that Manufacturing Orders functionality
+    When user clicks on Manufacturing Orders link
+    Then the page title should be "Manufacturing Orders - Odoo"
+
+

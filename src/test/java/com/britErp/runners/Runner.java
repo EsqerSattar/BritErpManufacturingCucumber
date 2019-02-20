@@ -1,4 +1,4 @@
-package runners;
+package com.britErp.runners;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
@@ -8,8 +8,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = "html:target/cucumber",
         features = "src/test/resources/features",
-        glue = "step_definitions",
-        tags = "@anytagename"
+        glue = "com/britErp/step_definitions",
+        tags = ""
 )
 public class Runner {
 }
