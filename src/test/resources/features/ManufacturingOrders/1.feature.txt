@@ -1,0 +1,111 @@
+Feature: 
+
+	
+	@BRIT-3995 @Manufacturing @uen_Online01
+	Scenario: As a manager i should be able to use Manufacturing Order functionality under the Operations category
+		Feature: As a manager i should be able to use Manufacturing Order functionality under the Operations category
+		
+		  Background: steps for user on the Manufacturing module page
+		    Given the "manager" signs in
+		    When the user click Manufacturing module
+		    Then the page title should be "Manufacturing Orders - Odoo”
+		
+		
+		  Scenario Outline: Verify that Manufacturing Orders link clickable
+		    When user clicks on Manufacturing Orders link
+		    Then the page title should be "Manufacturing Orders - Odoo"
+		    And the "<page elements>" should displayed
+		
+		    Examples:
+		      |page elements  |
+		      |Create Button  |
+		      |import Button  |
+		      |search box     |
+		      |List Button    |
+		      |Kanban Button  |
+		      |Calendar Button|
+		      |Pivot Button   |
+		      |Graph Button   |
+		
+		
+		  Scenario Outline: Verify that create button should be clickable
+			When user clicks on Create button 
+			Then the page title should be “New-Odoo”
+			And the "<page elements>" should displayed
+		
+		   Examples:
+		     |page elements       |
+			 |Save Button         |
+			 |Discard Button      |
+			 |Cansel Button       |
+			 |Product DropDown    |
+			 |Quantity to Products|
+			 |Bill Of Material    |
+			 |Deadline Start      |
+			 |Responsible         |
+			 |Source              |
+			 |Consume Material    |
+			 |Finished Products   |
+			 |Miscellanies        |
+			
+		
+		  Scenario: Verify that as a user i should be able to click Product dropdown box and system should be able to display Create and Edit button
+			When user click on Product dropdown
+			Then system displayed Create and Edit button
+			And verify the Create and Edit button is clickable
+		
+		
+		  Scenario: Verify that as a manager i should be able to type inside the Product box to and click Create and Edit button
+			When user click on Product dropdown
+			Then user input message “any message”
+			And user  click on Create and Edit button
+			And verify the Create page header is displayed
+		
+		
+		  Scenario: Verify that on the New create page user able to input date on the Deadline Start box
+			When user click on Deadline Start dropdown
+			Then user clear the box
+			And user input date “any date”
+		
+		
+		  Scenario Outline: Verify that on New create page the Responsible  dropdown default filled with user name ManufacturingManager
+			Given verify the Responsible dropdown filled with ManufacturingManager
+			When user click arrow icon
+			Then page should display page header “Open: Responsible”
+			And page should displayed "<user info>"
+			And user click Close button
+			
+		  Examples:
+			|user info|
+			|user name|
+			|email    |
+		
+		
+		  Scenario: Verify that when user click the Responsible dropdown, system should display users name and Search More button.
+			When user click on Responsible dropdown
+			Then system should displayed Search More button
+			And verify the Search More button clickable
+		
+		
+		Scenario: Verify that when user click the Search More button system should display new page 
+			Given user click Search More button
+			Then the system displayed page header "Search: Responsible"
+			And system should displayed search box
+			And user click close button
+		
+		
+		  Scenario: Verify that as a manager should NOT able to save the new manufacturing order page.
+			Given user on create page
+			And user click on Product box and select an item
+			Then user click Save button
+			And the system displayed error pop-up 
+		
+		
+			
+		
+			
+		
+			
+		
+			
+		
