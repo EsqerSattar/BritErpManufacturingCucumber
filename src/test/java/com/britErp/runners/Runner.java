@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         plugin = "html:target/cucumber",
         features = "src/test/resources/features",
         glue = "com/britErp/step_definitions",
-        tags = ""
+        tags = "@test"
 )
 public class Runner {
 }

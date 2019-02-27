@@ -1,4 +1,4 @@
-
+@smokeTest
   Feature: Major functionality of Manufacturing module
 
 

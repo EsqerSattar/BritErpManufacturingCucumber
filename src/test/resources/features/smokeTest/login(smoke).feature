@@ -8,7 +8,7 @@ Feature: Test environment is up and running
 
   Scenario Outline: Verify 'Log in' functionality
     Given the user goes to URL
-    And the user click BriteErpDemo database
+#    And the user click BriteErpDemo database
     When the "<valid user>" enters valid email
     And the "<valid user>" enters valid password
     And the user clicks Log in button

@@ -23,7 +23,7 @@ public class SmokeTestStepDefinitions {
 
     @Then("the page title should be {string}")
     public void the_page_title_should_be(String title) {
-        BrowserUtils.pageTitleContains(title,10);
+        BrowserUtils.pageTitleContains(title,15);
     }
 
     @Then("the page URL should contain {string}")
@@ -31,11 +31,11 @@ public class SmokeTestStepDefinitions {
         Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains(url));
     }
 
-    @Given("the user click BriteErpDemo database")
-    public void the_user_click_BriteErpDemo_database() {
-        LoginPage loginPage = new LoginPage();
-        loginPage.clickDemo.click();
-    }
+//    @Given("the user click BriteErpDemo database")
+//    public void the_user_click_BriteErpDemo_database() {
+//        LoginPage loginPage = new LoginPage();
+//        loginPage.clickDemo.click();
+//    }
 
 
 
@@ -86,7 +86,7 @@ public class SmokeTestStepDefinitions {
     public void the_signs_in(String user) throws InterruptedException {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
 
-        new LoginPage().clickDemo.click();
+//        new LoginPage().clickDemo.click();
 
         switch (user) {
             case "manager":
