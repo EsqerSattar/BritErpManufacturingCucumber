@@ -23,7 +23,7 @@ public class SmokeTestStepDefinitions {
 
     @Then("the page title should be {string}")
     public void the_page_title_should_be(String title) {
-        BrowserUtils.pageTitleContains(title,15);
+        BrowserUtils.pageTitleContains(title,10);
     }
 
     @Then("the page URL should contain {string}")

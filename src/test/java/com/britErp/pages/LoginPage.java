@@ -29,7 +29,7 @@ public class LoginPage {
     public WebElement module;
 
     public void loginAsManager() {
-        //new LoginPage().clickDemo.click();
+        new LoginPage();//.clickDemo.click();
         Email.sendKeys(ConfigurationReader.getProperty("managerLogin"));
         Password.sendKeys(ConfigurationReader.getProperty("managerPass"));
         loginButton.click();

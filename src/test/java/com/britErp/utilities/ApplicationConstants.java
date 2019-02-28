@@ -2,7 +2,7 @@ package com.britErp.utilities;
 
 public class ApplicationConstants {
 
-    public static final String LOGIN_PAGE_TITLE = "Odoo";
+    public static final String LOGIN_PAGE_TITLE = "Login | Website localhost";
     public static final String INBOX_PAGE_TITLE = "#Inbox - Odoo";
     public static final String NEW_PAGE_TITLE = "New - Odoo";
     public static final String MANUFACTURING_ORDERS_PAGE_TITLE = "Manufacturing Orders - Odoo";

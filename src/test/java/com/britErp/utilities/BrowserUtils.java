@@ -251,7 +251,8 @@ public class BrowserUtils {
      * @param attributeValue
      */
     public static void setAttribute(WebElement element, String attributeName, String attributeValue) {
-        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].setAttribute(arguments[1], arguments[2]);", element, attributeName, attributeValue);
+        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].setAttribute(arguments[1]," +
+                " arguments[2]);", element, attributeName, attributeValue);
     }
 
     /**
