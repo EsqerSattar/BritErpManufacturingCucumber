@@ -2,6 +2,7 @@ package com.britErp.step_definitions;
 
 import com.britErp.pages.LoginPage;
 import com.britErp.pages.MajorFunctionalityPage;
+import com.britErp.pages.ManufacturingOrdersPage;
 import com.britErp.utilities.BrowserUtils;
 import com.britErp.utilities.ConfigurationReader;
 import com.britErp.utilities.Driver;
@@ -9,6 +10,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.WebElement;
 
 public class SmokeTestStepDefinitions {
 
@@ -134,5 +136,8 @@ public class SmokeTestStepDefinitions {
     public void the_user_click_on_Manufacturing_Orders_link() {
         new MajorFunctionalityPage().manufacturingOrdersReport.click();
     }
+
+
+
 
 }

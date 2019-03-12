@@ -44,10 +44,7 @@ Feature:
 			 |Deadline Start      |
 			 |Responsible         |
 			 |Source              |
-			 |Consume Material    |
-			 |Finished Products   |
-			 |Miscellanies        |
-			
+
 		
 		  Scenario: Verify that as a user i should be able to click Product dropdown box and system should be able to display Create and Edit button
 			When user click on Product dropdown

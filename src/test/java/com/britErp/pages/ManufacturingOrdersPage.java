@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import javax.xml.xpath.XPath;
+
 
 public class ManufacturingOrdersPage {
     public ManufacturingOrdersPage(){
@@ -18,11 +20,11 @@ public class ManufacturingOrdersPage {
     @FindBy(xpath ="//button[@accesskey='c']")
     public WebElement createButton;
 
-    @FindBy(xpath = "//button[@type='button'][2]")
+    @FindBy(xpath = "//button[@class='btn btn-sm btn-default o_button_import']")
     public WebElement importButton;
 
     @FindBy(xpath = "//input[@class='o_searchview_input']")
-    public WebElement mainSearchButton;
+    public WebElement mainSearchBox;
 
     @FindBy(xpath = "//button[@accesskey='l']")
     public WebElement listButton;
@@ -42,6 +44,9 @@ public class ManufacturingOrdersPage {
     @FindBy(xpath = "//button[@accesskey='s']")
     public WebElement saveButton;
 
+//    @FindBy(xpath = "(//button[@class='btn btn-sm btn-default'])[1]")
+//    public WebElement cancel1Button;
+
     @FindBy(xpath = "//button[@accesskey='j']")
     public WebElement discardButton;
 
@@ -53,6 +58,15 @@ public class ManufacturingOrdersPage {
 
     @FindBy(xpath = "//li[@tabindex='-1'][2]")
     public WebElement createAndEditButton;
+
+    @FindBy(xpath = "//input[@name='product_qty']")
+    public WebElement quantityToProductBox;
+
+    @FindBy(xpath = "(//div[@class='o_input_dropdown']/input)[3]")
+    public WebElement billOfMaterialBox;
+
+    @FindBy(xpath = "//input[@name='origin']")
+    public WebElement sourceBox;
 
     @FindBy(xpath = "//h4[@class='modal-title']")
     public WebElement productHeader;

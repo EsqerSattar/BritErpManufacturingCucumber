@@ -1,4 +1,4 @@
-@smokeTest @login
+@smokeTest
 Feature: Test environment is up and running
 
   Scenario: Verify the url is running
